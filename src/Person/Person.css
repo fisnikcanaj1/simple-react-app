@@ -10,8 +10,8 @@
     border: 1px solid black;
 }
 
-/* @media (min-width: 500px) {
+@media (min-width: 500px) {
     .Person {
         width: 80%;
     }
-} */
+}
