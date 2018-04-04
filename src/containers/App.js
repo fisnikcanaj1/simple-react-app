@@ -5,6 +5,7 @@ import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
   state = {
+    title: "Hello, I'm React app",
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
       { id: 'vasdf1', name: 'Manu', age: 29 },
@@ -22,8 +23,6 @@ class App extends Component {
     const person = {
       ...this.state.persons[personIndex]
     };
-
-    // const person = Object.assign({}, this.state.persons[personIndex]);
 
     person.name = event.target.value;
 
@@ -47,7 +46,7 @@ class App extends Component {
 
   render() {
     let persons = null;
-
+    
     if (this.state.showPersons) {
       persons = < Persons 
             persons={this.state.persons}
@@ -59,6 +58,7 @@ class App extends Component {
     return (
       <div className={styles.App}>
         <Cockpit 
+          title={this.state.title}
           showPersons={this.state.showPersons} 
           persons={this.state.persons} 
           clicked={this.togglePersonsHandler}/>
